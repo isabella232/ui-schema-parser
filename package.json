@@ -49,10 +49,12 @@
     "zuul": "zuul --no-coverage -- test/*.js"
   },
   "devDependencies": {
-    "coveralls": "^2.11.14",
-    "istanbul": "^0.4.5",
-    "mocha": "^3.1.2",
-    "tmp": "^0.0.29"
+    "coveralls": "2.11.14",
+    "istanbul": "0.4.5",
+    "mocha": "3.1.2",
+    "node-libs-browser": "2.0.0",
+    "tmp": "0.0.29",
+    "webpack": "1.13.3"
   },
   "author": {
     "name": "Matthieu Monsch",

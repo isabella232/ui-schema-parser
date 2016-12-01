@@ -1,4 +1,12 @@
-# Avsc [![NPM version](https://img.shields.io/npm/v/avsc.svg)](https://www.npmjs.com/package/avsc) [![Download count](https://img.shields.io/npm/dm/avsc.svg)](https://www.npmjs.com/package/avsc) [![Build status](https://travis-ci.org/mtth/avsc.svg?branch=master)](https://travis-ci.org/mtth/avsc) [![Coverage status](https://coveralls.io/repos/mtth/avsc/badge.svg?branch=master&service=github)](https://coveralls.io/github/mtth/avsc?branch=master)
+# Avsc
+
+### NOTE:
+  This is a clone of [mtth/avsc](https://github.com/mtth/avsc) repo.
+
+  The reason we have a separate repo is because [CDAP](github.com/caskdata/cdap) supports avro-based schemas which has subtle changes (relaxed rules)
+    - Map can support complex types
+    - Names can have `-` (hyphens).
+    So this repo adds those rules to the parser
 
 Pure JavaScript implementation of the [Avro
 specification](https://avro.apache.org/docs/current/spec.html).
