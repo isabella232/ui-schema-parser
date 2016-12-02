@@ -4,9 +4,11 @@
   This is a clone of [mtth/avsc](https://github.com/mtth/avsc) repo.
 
   The reason we have a separate repo is because [CDAP](github.com/caskdata/cdap) supports avro-based schemas which has subtle changes (relaxed rules)
-    - Map can support complex types
-    - Names can have `-` (hyphens).
-    So this repo adds those rules to the parser
+
+  * Map can support complex types
+  * Names can have `-` (hyphens).
+
+So this repo adds those rules to the parser
 
 Pure JavaScript implementation of the [Avro
 specification](https://avro.apache.org/docs/current/spec.html).
@@ -25,7 +27,7 @@ specification](https://avro.apache.org/docs/current/spec.html).
 ## Installation
 
 ```bash
-$ npm install avsc
+$ npm install cdap-avsc
 ```
 
 `avsc` is compatible with all versions of [node.js][] since `0.11` and major
@@ -48,7 +50,7 @@ distributions with the [releases][] (but please host your own copy).
 Inside a node.js module, or using browserify:
 
 ```javascript
-const avro = require('avsc');
+const avro = require('cdap-avsc');
 ```
 
 + Encode and decode values from a known schema:
