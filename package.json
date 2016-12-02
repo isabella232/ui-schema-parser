@@ -1,8 +1,8 @@
 {
-  "name": "avsc",
+  "name": "cdap-avsc",
   "version": "4.1.10",
-  "description": "Avro for JavaScript",
-  "homepage": "https://github.com/mtth/avsc",
+  "description": "This project is a clone of mtth/avsc repo with modifications required by CDAP",
+  "homepage": "https://github.com/caskdata/ui-schema-parser",
   "keywords": [
     "api",
     "avdl",
@@ -29,9 +29,10 @@
   ],
   "files": [
     "lib",
-    "etc/browser"
+    "etc/browser",
+    "dist"
   ],
-  "main": "./lib",
+  "main": "dist/cdap-avsc-lib.js",
   "browser": {
     "./lib": "./etc/browser/avsc.js",
     "./lib/files": "./etc/browser/lib/files.js",
@@ -46,7 +47,9 @@
     "dist": "./etc/scripts/dist",
     "perf": "./etc/scripts/perf etc/schemas/*",
     "test": "mocha",
-    "zuul": "zuul --no-coverage -- test/*.js"
+    "zuul": "zuul --no-coverage -- test/*.js",
+    "prod-build": "NODE_ENV=production ./node_modules/webpack/bin/webpack.js --dev-tools -D",
+    "buildwatch": "NODE_ENV=development ./node_modules/webpack/bin/webpack.js --dev-tools -D --watch"
   },
   "devDependencies": {
     "coveralls": "2.11.14",
@@ -60,9 +63,14 @@
     "name": "Matthieu Monsch",
     "email": "monsch@alum.mit.edu"
   },
+  "contributors": [
+    {
+      "name": "Caskdata"
+    }
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mtth/avsc.git"
+    "url": "git://github.com/caskdata/ui-schema-parser.git"
   }
 }
